@@ -23,7 +23,7 @@ namespace OnlineVacationReservation
         public static string CS = ConfigurationManager.ConnectionStrings["Defaultconnection"].ConnectionString;
 
         [WebMethod]
-        public DataSet searchFlight(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, DateTime Departure)
+        public DataSet SearchFlight(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, DateTime Departure)
         {
             DataSet ds = new DataSet();
 
@@ -56,7 +56,7 @@ namespace OnlineVacationReservation
 
             return ds;
         }
-    
-    
+
+
     }
 }
