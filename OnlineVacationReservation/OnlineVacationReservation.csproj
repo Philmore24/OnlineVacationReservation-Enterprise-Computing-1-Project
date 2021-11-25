@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="TESTdatabase.aspx" />
     <None Include="Connected Services\ServiceReference1\Booking.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
@@ -279,6 +280,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TESTdatabase.aspx.cs">
+      <DependentUpon>TESTdatabase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TESTdatabase.aspx.designer.cs">
+      <DependentUpon>TESTdatabase.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

@@ -42,8 +42,10 @@ namespace OnlineVacationReservation
                     {
                         con.Open();
                     }
-                    SqlDataAdapter sda = new SqlDataAdapter();
-                    sda.SelectCommand = cmd;
+                    SqlDataAdapter sda = new SqlDataAdapter
+                    {
+                        SelectCommand = cmd
+                    };
                     sda.Fill(ds);
                     if (con.State == ConnectionState.Open)
                     {
