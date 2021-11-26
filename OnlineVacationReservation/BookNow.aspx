@@ -16,7 +16,7 @@
                 cultural diversity that can be found here. No place on earth feels like Jamaica!
             </p>
             <p>
-                &nbsp;<asp:Button ID="Button1" runat="server" CssClass="button" Text="Book now!" />
+                &nbsp;<asp:Button ID="Button1" runat="server" CssClass="button" Text="Book now!" OnClick="Button1_Click" />
             </p>
         </div>
         <div class="col-md-4">

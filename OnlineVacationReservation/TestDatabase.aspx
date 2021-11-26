@@ -4,6 +4,7 @@
     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Flight_id" DataSourceID="SqlDataSource1" Height="122px" Width="391px">
         <Columns>
+            <asp:CommandField SelectText="BOOK" ShowSelectButton="True" />
             <asp:BoundField DataField="Flight_id" HeaderText="Flight_id" InsertVisible="False" ReadOnly="True" SortExpression="Flight_id" />
             <asp:BoundField DataField="Departing_Country" HeaderText="Departing_Country" SortExpression="Departing_Country" />
             <asp:BoundField DataField="Departing_City" HeaderText="Departing_City" SortExpression="Departing_City" />
