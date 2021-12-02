@@ -13,21 +13,22 @@ namespace OnlineVacationReservation
 {
     public partial class FlightSearch : System.Web.UI.Page
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
-       
+
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             ServiceReference2.FlightsSoapClient client = new ServiceReference2.FlightsSoapClient();
-       
+
             GridView1.DataSource = client.searchFlight(txtDCountry.Text, txtDCity.Text, txDECountry.Text, txDECity.Text, Convert.ToDateTime(txtDepartureDate.Text));
             GridView1.DataBind();
         }
+
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {

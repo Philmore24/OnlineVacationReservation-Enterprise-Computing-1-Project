@@ -108,6 +108,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+
+    <Content Include="FlightReceipt.aspx" />
+    <Content Include="image\arrival.svg" />
+    <Content Include="image\depart.svg" />
+    <Content Include="image\jtb-logo.png" />
+    <None Include="Connected Services\ServiceReference1\Booking.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+
     <Content Include="Booking.aspx" />
     <None Include="Connected Services\ServiceReference2\Flights.disco" />
     <None Include="Connected Services\ServiceReference2\configuration91.svcinfo" />
@@ -254,6 +267,13 @@
     <Compile Include="ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FlightReceipt.aspx.cs">
+      <DependentUpon>FlightReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FlightReceipt.aspx.designer.cs">
+      <DependentUpon>FlightReceipt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Flights.asmx.cs">
       <DependentUpon>Flights.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -300,6 +320,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="CSS\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

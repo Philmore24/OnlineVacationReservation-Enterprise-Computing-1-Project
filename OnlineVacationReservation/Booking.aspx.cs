@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
 
+
 namespace OnlineVacationReservation
 {
     public partial class Booking1 : System.Web.UI.Page
@@ -16,10 +17,15 @@ namespace OnlineVacationReservation
         public static string CS = ConfigurationManager.ConnectionStrings["Defaultconnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+
             //String mycon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OnlineVaction.mdf;Integrated Security=True";
             String Fid = Request.QueryString["Flight_id"];
             String myquery = "Select * from Flight WHERE Flight_id ='" + Fid + "'";
             SqlConnection con = new SqlConnection(CS);
+            String mycon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\OnlineVaction.mdf;Integrated Security=True";
+            String Fid = Request.QueryString["Flight_id"];
+            String myquery = "Select * from Flight WHERE Flight_id ='" + Fid + "'";
+            SqlConnection con = new SqlConnection(mycon);
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = myquery;
             cmd.Connection = con;
@@ -40,6 +46,7 @@ namespace OnlineVacationReservation
                 Seats.Text = ds.Tables[0].Rows[0]["Seats_Available"].ToString();
             }
             con.Close();
+
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -65,6 +72,7 @@ namespace OnlineVacationReservation
             
                 string style;
                 int price = 0;
+
 
 
                 style = RadioButtonList1.SelectedValue;
