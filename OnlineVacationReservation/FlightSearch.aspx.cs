@@ -29,9 +29,12 @@ namespace OnlineVacationReservation
             GridView1.DataBind();
         }
 
-        protected void btnBook_Click(object sender, EventArgs e)
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Response.Redirect("~/Booking.aspx");
+            string Flight_id = GridView1.SelectedRow.Cells[1].Text;
+            Response.Redirect("Booking.aspx?Flight_id=" + Flight_id);
         }
     }
+    
+    
 }
