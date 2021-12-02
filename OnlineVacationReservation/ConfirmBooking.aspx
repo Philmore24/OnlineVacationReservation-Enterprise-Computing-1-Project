@@ -3,7 +3,7 @@
      <h2><%: Title %></h2>
      <div  class="container">
          <div class="form-horizontal">
-              <h2>Confirm Booking Details</h2>
+              <h2>Confirm Booking Details.</h2>
              </div>
          </div>
 </asp:Content>
