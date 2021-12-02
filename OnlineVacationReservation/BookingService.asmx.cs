@@ -19,7 +19,9 @@ namespace OnlineVacationReservation
     // [System.Web.Script.Services.ScriptService]
     public class BookingService : System.Web.Services.WebService
     {
+        public int cusid;
         public static string CS = ConfigurationManager.ConnectionStrings["Defaultconnection"].ConnectionString;
+
 
         [WebMethod]
         public int FlightBooking(string FirstName, string LastName, string Phone_Number, string Email, int Flight_ID, int Number_of_Seat, string Class)
@@ -37,17 +39,27 @@ namespace OnlineVacationReservation
                     cmd.Parameters.Add("Flight_ID", SqlDbType.Int).Value = Flight_ID;
                     cmd.Parameters.Add("Number_of_Seat", SqlDbType.Int).Value = Number_of_Seat;
                     cmd.Parameters.Add("Class", SqlDbType.VarChar, 50).Value = Class;
-                   
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read())
+                        {
+                            cusid = Convert.ToInt32(dr["Customer_ID"]);
+                        }
+                    }
+
+
 
                     if (con.State != ConnectionState.Open)
                     {
                         con.Open();
                     }
                     retRecord = cmd.ExecuteNonQuery();
-                    
+
                 }
             }
-                return retRecord;
+            retRecord = cusid;
+            return retRecord;
         }
     }
 }

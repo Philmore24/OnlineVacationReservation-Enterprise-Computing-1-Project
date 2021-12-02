@@ -13,5 +13,13 @@ namespace OnlineVacationReservation
         {
 
         }
+
+
+
+
+        protected void flightbook(object sender, EventArgs e)
+        {
+            Response.Redirect("FlightSearch");
+        }
     }
 }

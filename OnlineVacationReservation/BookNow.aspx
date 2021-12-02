@@ -12,11 +12,11 @@
         <div class="col-md-4">
             <h2>Flights</h2>
             <p>
-               The searing smell of jerk over the fire. The swizzle of rum in your glass. No place on earth provides the range of attractions and the 
+                The searing smell of jerk over the fire. The swizzle of rum in your glass. No place on earth provides the range of attractions and the 
                 cultural diversity that can be found here. No place on earth feels like Jamaica!
             </p>
             <p>
-                &nbsp;<asp:Button ID="Button1" runat="server" CssClass="button" Text="Book now!" />
+                &nbsp;<asp:Button ID="flightBook" runat="server" CssClass="button" Text="Book now!" OnClick="flightbook" />
             </p>
         </div>
         <div class="col-md-4">

@@ -11,7 +11,8 @@ namespace OnlineVacationReservation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            String Fid = Request.QueryString["Customer_id"];
+            Label1.Text = Fid;
         }
     }
 }

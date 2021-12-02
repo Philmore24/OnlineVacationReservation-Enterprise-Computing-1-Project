@@ -4,6 +4,9 @@
      <div  class="container">
          <div class="form-horizontal">
               <h2>Confirm Booking Details.</h2>
+              <p>
+                  <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+              </p>
              </div>
          </div>
 </asp:Content>
