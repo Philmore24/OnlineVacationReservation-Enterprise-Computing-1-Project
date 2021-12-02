@@ -44,7 +44,7 @@
              <div class="form-group">
                 <asp:Label ID="Label5" runat="server" CssClass="col-md-2 control-label"  font-size="15px" Text="Departure Date and Time"></asp:Label>
                 <div class="col-md-3">
-                    <asp:TextBox ID="txtDepartureDate" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDepartureDate" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server" TextMode="DateTime"></asp:TextBox>
                    
                 </div>
             </div>
@@ -60,7 +60,7 @@
         </div>
         <hr />
         <div>
-            <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" >
+            <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -72,14 +72,8 @@
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
 
                 <Columns>
-
                             
-
-                    <asp:TemplateField>
-                                <ItemTemplate>
-                                    <asp:Button ID="btnBook" runat="server" Text="Book Now" OnClick="btnBook_Click" />
-                                </ItemTemplate>
-                            </asp:TemplateField>
+                        <asp:CommandField HeaderText="Book Now" ShowHeader="True" ShowSelectButton="True" />
                             
                         </Columns>
                 </asp:GridView>
