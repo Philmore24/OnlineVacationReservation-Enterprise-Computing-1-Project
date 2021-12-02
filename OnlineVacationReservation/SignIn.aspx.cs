@@ -22,7 +22,7 @@ namespace CarsMarket
             String CS = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionString1"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
-                SqlCommand cmd = new SqlCommand("Select * from Users where Username='" + Username.Text + "' and Password='" + Password.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("Select * from Register where Username='" + Username.Text + "' and Password='" + Password.Text + "'", con);
                 con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -30,10 +30,10 @@ namespace CarsMarket
 
                 if (dt.Rows.Count != 0)
                 {
-                    string Utype;
-                    Utype = dt.Rows[0][4].ToString().Trim();
+                    //string Utype;
+                    //Utype = dt.Rows[0][4].ToString().Trim();
 
-                    if (Utype == "U")
+                   /* if (Utype == "C")
                     {
                         Session["USERNAME"] = Username.Text;
                         Response.Redirect("UserHome.aspx");
@@ -43,16 +43,17 @@ namespace CarsMarket
                     {
                         Session["USERNAME"] = Username.Text;
                         Response.Redirect("AdminHome.aspx");
-                    }
+                    }*/
 
 
 
                     Session["USERNAME"] = Username.Text;
-                    Response.Redirect("UserHome.aspx");
+                    Response.Redirect("HomePage.aspx");
                 }
                 else
                 {
                     lblError.Text = "Invalid Username or Password!";
+                    Response.Redirect("SignIn.aspx");
                 }
             }
         }
