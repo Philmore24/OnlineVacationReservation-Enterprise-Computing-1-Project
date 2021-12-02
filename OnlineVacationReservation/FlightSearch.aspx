@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FlightSearch.aspx.cs" Inherits="OnlineVacationReservation.FlightSearch" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FlightSearch.aspx.cs" Inherits="OnlineVacationReservation.FlightSearch" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
@@ -45,7 +45,10 @@
             <div class="form-group">
                 <asp:Label ID="Label5" runat="server" CssClass="col-md-2 control-label" Font-Size="15px" Text="Departure Date and Time"></asp:Label>
                 <div class="col-md-3">
+
+                    <asp:TextBox ID="txtDepartureDate" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server" TextMode="DateTime"></asp:TextBox>
                     <asp:TextBox ID="txtDepartureDate" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server"></asp:TextBox>
+
 
                 </div>
             </div>
@@ -61,7 +64,11 @@
         </div>
         <hr />
         <div>
+
+            <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+
             <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -74,6 +81,14 @@
 
                 <Columns>
 
+                            
+                        <asp:CommandField HeaderText="Book Now" ShowHeader="True" ShowSelectButton="True" />
+                            
+                        </Columns>
+                </asp:GridView>
+               
+        </div>
+
                     <asp:CommandField SelectText="Book Now" ShowSelectButton="True" />
 
 
@@ -81,6 +96,7 @@
 
                 </Columns>
             </asp:GridView>
+
 
         </div>
     </div>

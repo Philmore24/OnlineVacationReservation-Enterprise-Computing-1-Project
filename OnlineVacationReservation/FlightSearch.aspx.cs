@@ -30,15 +30,12 @@ namespace OnlineVacationReservation
         }
 
 
-
-
-
-
-
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Flight_id = GridView1.SelectedRow.Cells[1].Text;
             Response.Redirect("Booking.aspx?Flight_id=" + Flight_id);
         }
     }
+    
+    
 }
