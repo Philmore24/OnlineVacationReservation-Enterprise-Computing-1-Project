@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58f1fa32-c35f-477e-b9ff-866389eb902a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca40e8a0-d7cd-4088-8254-c2334f2b8251" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://localhost:44379/Cruise.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://localhost:44379/CruiseService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Cruise.wsdl" MetadataType="Wsdl" ID="31f6b18d-b546-4116-a922-d740ddb6dd3f" SourceId="1" SourceUrl="https://localhost:44379/Cruise.asmx?wsdl" />
-    <MetadataFile FileName="Cruise.disco" MetadataType="Disco" ID="66224150-df9d-4a8f-8826-d9584b0fbd31" SourceId="1" SourceUrl="https://localhost:44379/Cruise.asmx?disco" />
+    <MetadataFile FileName="CruiseService.disco" MetadataType="Disco" ID="a5f9c137-08ab-401c-b8ea-10846f1d6a6c" SourceId="1" SourceUrl="https://localhost:44379/CruiseService.asmx?disco" />
+    <MetadataFile FileName="CruiseService.wsdl" MetadataType="Wsdl" ID="ddf0971b-8e81-470c-a9a7-f44afad8a2e3" SourceId="1" SourceUrl="https://localhost:44379/CruiseService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

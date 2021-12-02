@@ -11,7 +11,7 @@ namespace OnlineVacationReservation
 {
 
 
-    public partial class Booking1
+    public partial class Cruise1
     {
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace OnlineVacationReservation
         protected global::System.Web.UI.HtmlControls.HtmlTable Table1;
 
         /// <summary>
-        /// flightid control.
+        /// Cruiseid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label flightid;
+        protected global::System.Web.UI.WebControls.Label Cruiseid;
 
         /// <summary>
         /// DepartCountry control.
@@ -69,40 +69,31 @@ namespace OnlineVacationReservation
         protected global::System.Web.UI.WebControls.Label DestinCity;
 
         /// <summary>
-        /// Depature control.
+        /// CheckIn   control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Depature;
+        protected global::System.Web.UI.WebControls.Label CheckIn;
 
         /// <summary>
-        /// Arrival control.
+        /// CheckOut control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Arrival;
+        protected global::System.Web.UI.WebControls.Label CheckOut;
 
         /// <summary>
-        /// Duration control.
+        /// Rooms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Duration;
-
-        /// <summary>
-        /// Seats control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Seats;
+        protected global::System.Web.UI.WebControls.Label Rooms;
 
         /// <summary>
         /// Label1 control.

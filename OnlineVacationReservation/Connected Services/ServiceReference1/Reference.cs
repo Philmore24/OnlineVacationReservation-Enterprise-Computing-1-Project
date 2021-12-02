@@ -13,50 +13,50 @@ namespace OnlineVacationReservation.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.BookingSoap")]
-    public interface BookingSoap {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.CruiseSoap")]
+    public interface CruiseSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/searchFlight", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/searchCruise", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet searchFlight(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City);
+        System.Data.DataSet searchCruise(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, System.DateTime Date_CheckIn, System.DateTime Date_CheckOut);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/searchFlight", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> searchFlightAsync(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/searchCruise", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> searchCruiseAsync(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, System.DateTime Date_CheckIn, System.DateTime Date_CheckOut);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface BookingSoapChannel : OnlineVacationReservation.ServiceReference1.BookingSoap, System.ServiceModel.IClientChannel {
+    public interface CruiseSoapChannel : OnlineVacationReservation.ServiceReference1.CruiseSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BookingSoapClient : System.ServiceModel.ClientBase<OnlineVacationReservation.ServiceReference1.BookingSoap>, OnlineVacationReservation.ServiceReference1.BookingSoap {
+    public partial class CruiseSoapClient : System.ServiceModel.ClientBase<OnlineVacationReservation.ServiceReference1.CruiseSoap>, OnlineVacationReservation.ServiceReference1.CruiseSoap {
         
-        public BookingSoapClient() {
+        public CruiseSoapClient() {
         }
         
-        public BookingSoapClient(string endpointConfigurationName) : 
+        public CruiseSoapClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public BookingSoapClient(string endpointConfigurationName, string remoteAddress) : 
+        public CruiseSoapClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public BookingSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CruiseSoapClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public BookingSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public CruiseSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
-        public System.Data.DataSet searchFlight(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City) {
-            return base.Channel.searchFlight(Departing_Country, Departing_City, Destination_Country, Destination_City);
+        public System.Data.DataSet searchCruise(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, System.DateTime Date_CheckIn, System.DateTime Date_CheckOut) {
+            return base.Channel.searchCruise(Departing_Country, Departing_City, Destination_Country, Destination_City, Date_CheckIn, Date_CheckOut);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> searchFlightAsync(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City) {
-            return base.Channel.searchFlightAsync(Departing_Country, Departing_City, Destination_Country, Destination_City);
+        public System.Threading.Tasks.Task<System.Data.DataSet> searchCruiseAsync(string Departing_Country, string Departing_City, string Destination_Country, string Destination_City, System.DateTime Date_CheckIn, System.DateTime Date_CheckOut) {
+            return base.Channel.searchCruiseAsync(Departing_Country, Departing_City, Destination_Country, Destination_City, Date_CheckIn, Date_CheckOut);
         }
     }
 }

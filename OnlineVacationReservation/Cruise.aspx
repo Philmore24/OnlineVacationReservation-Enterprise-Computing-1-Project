@@ -1,35 +1,33 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="OnlineVacationReservation.Booking1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Cruise.aspx.cs" Inherits="OnlineVacationReservation.Cruise1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <h2><%: Title %></h2>
+    <h2><%: Title %></h2>
 
     <div  class="container">
          <div class="form-horizontal">
-         <h2> Selected Flight </h2>
+         <h2> Selected Cruise </h2>
             <hr />
          <div class="form-group">
 
              <Table ID="Table1" runat="server">
                  <tr>
-                     <td style="height: 20px; width: 345px">Flgiht ID</td>
+                     <td style="height: 20px; width: 345px">Cruise ID</td>
                       <td style="height: 20px; width: 420px">Departing Country </td>
                       <td style="height: 20px; width: 345px">Departing City</td>
                      <td style="height: 20px; width: 420px"> Destination Country</td>
                      <td style="height: 20px; width: 345px"> Destination City</td>
-                     <td style="height: 20px; width: 345px"> Departure</td>
-                     <td style="height: 20px; width: 345px"> Arrival </td>
-                     <td style="height: 20px; width: 345px"> Duration </td>
-                      <td style="height: 20px; width: 345px">Available Seats </td>
+                     <td style="height: 20px; width: 345px"> CheckIn Date </td>
+                     <td style="height: 20px; width: 345px"> CheckOut Date</td>
+                      <td style="height: 20px; width: 345px">Available Rooms</td>
                  </tr>
                  <tr>
-                     <td  style="width: 345px"> <asp:Label ID="flightid" runat="server"></asp:Label></td>
+                     <td  style="width: 345px"> <asp:Label ID="Cruiseid" runat="server"></asp:Label></td>
                      <td  style="width: 420px"><asp:Label ID="DepartCountry" runat="server"></asp:Label></td>
                      <td  style="width: 345px"><asp:Label ID="DepartCity" runat="server"></asp:Label></td>
                      <td  style="width: 420px"><asp:Label ID="DestiCountry" runat="server"></asp:Label></td>
                      <td  style="width: 345px"><asp:Label ID="DestinCity" runat="server"></asp:Label></td>
-                     <td  style="width: 345px"> <asp:Label ID="Depature" runat="server"></asp:Label></td>
-                     <td  style="width: 345px"> <asp:Label ID="Arrival" runat="server"></asp:Label></td>
-                     <td  style="width: 345px"> <asp:Label ID="Duration" runat="server"></asp:Label></td>
-                     <td style="width: 345px"> <asp:Label ID="Seats" runat="server"></asp:Label></td>
+                     <td  style="width: 345px"> <asp:Label ID="CheckIn  " runat="server"></asp:Label></td>
+                     <td  style="width: 345px"> <asp:Label ID="CheckOut" runat="server"></asp:Label></td>
+                     <td style="width: 345px"> <asp:Label ID="Rooms" runat="server"></asp:Label></td>
                  </tr>
                  </Table>
             
@@ -105,4 +103,3 @@
       </div>
         </div>
 </asp:Content>
- 

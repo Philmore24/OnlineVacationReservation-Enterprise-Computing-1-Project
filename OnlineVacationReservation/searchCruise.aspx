@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FlightSearch.aspx.cs" Inherits="OnlineVacationReservation.FlightSearch" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="searchCruise.aspx.cs" Inherits="OnlineVacationReservation.searchCruise" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
     
     <div  class="container">
         <div class="form-horizontal">
-            <h2> Search For Your Fligth Here </h2>
+            <h2> Search For Your Cruise  Here </h2>
             <hr />
             <div class="form-group">
                <h2> From </h2>
@@ -42,9 +42,17 @@
             </div>
 
              <div class="form-group">
-                <asp:Label ID="Label5" runat="server" CssClass="col-md-2 control-label"  font-size="15px" Text="Departure Date and Time"></asp:Label>
+                <asp:Label ID="Label5" runat="server" CssClass="col-md-2 control-label"  font-size="15px" Text="CheckIn Date and Time"></asp:Label>
                 <div class="col-md-3">
-                    <asp:TextBox ID="txtDepartureDate" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server" TextMode="DateTime"></asp:TextBox>
+                    <asp:TextBox ID="txtCheckIn" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server" TextMode="DateTime"></asp:TextBox>
+                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <asp:Label ID="Label6" runat="server" CssClass="col-md-2 control-label"  font-size="15px" Text="CheckOut Date and Time"></asp:Label>
+                <div class="col-md-3">
+                    <asp:TextBox ID="txtCheckOut" CssClass="form-control" placeholder="YYYY-MM-DD HH:MM" runat="server" TextMode="DateTime"></asp:TextBox>
                    
                 </div>
             </div>
