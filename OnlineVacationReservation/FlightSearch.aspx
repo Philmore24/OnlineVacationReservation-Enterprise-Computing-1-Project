@@ -60,7 +60,11 @@
         </div>
         <hr />
         <div>
+
             <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+
+            <asp:GridView ID="GridView1" runat="server" Font-Size="Large" EmptyDataText="Sorry No Flights Available For The Specifying Dastination" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
@@ -72,6 +76,7 @@
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
 
                 <Columns>
+
                             
                         <asp:CommandField HeaderText="Book Now" ShowHeader="True" ShowSelectButton="True" />
                             
@@ -79,5 +84,16 @@
                 </asp:GridView>
                
         </div>
+
+                    <asp:CommandField SelectText="Book Now" ShowSelectButton="True" />
+
+
+
+
+                </Columns>
+            </asp:GridView>
+
+
         </div>
+    </div>
 </asp:Content>
