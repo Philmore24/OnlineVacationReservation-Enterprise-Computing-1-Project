@@ -44,6 +44,13 @@ namespace OnlineVacationReservation
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
+            Session["FlightFname"] = txtFname.Text;
+            Session["FlightLname"] = txtLname.Text;
+            Session["FlightEmail"] = txtEmail.Text;
+            Session["FlightPhone#"] = txtnumber.Text;
+            Session["FlightSeat"] = txtTicket.Text;
+            Session["FlightClass"] = RadioButtonList1.SelectedItem.Text;
+
 
             ServiceReference3.BookingServiceSoapClient client = new ServiceReference3.BookingServiceSoapClient();
             int ret = client.FlightBooking(txtFname.Text, txtLname.Text, txtnumber.Text, txtEmail.Text, Convert.ToInt32(flightid.Text), Convert.ToInt32(txtTicket.Text), RadioButtonList1.SelectedItem.Text);

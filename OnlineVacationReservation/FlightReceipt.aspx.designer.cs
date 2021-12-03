@@ -11,44 +11,80 @@ namespace OnlineVacationReservation
 {
 
 
-    public partial class ConfirmBooking
+    public partial class FlightReceipt
     {
 
         /// <summary>
-        /// CusID control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CusID;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// FlightID control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FlightID;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// TicketID control.
+        /// BookingRef control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TicketID;
+        protected global::System.Web.UI.WebControls.Label BookingRef;
 
         /// <summary>
-        /// BookDate control.
+        /// bookingDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label BookDate;
+        protected global::System.Web.UI.WebControls.Label bookingDate;
+
+        /// <summary>
+        /// firstname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label firstname;
+
+        /// <summary>
+        /// lastname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lastname;
+
+        /// <summary>
+        /// DepartDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label DepartDate;
+
+        /// <summary>
+        /// flightid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label flightid;
 
         /// <summary>
         /// DepartCountry control.
@@ -57,7 +93,7 @@ namespace OnlineVacationReservation
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DepartCountry;
+        protected global::System.Web.UI.WebControls.Label DepartCountry;
 
         /// <summary>
         /// DepartCity control.
@@ -66,105 +102,105 @@ namespace OnlineVacationReservation
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DepartCity;
+        protected global::System.Web.UI.WebControls.Label DepartCity;
 
         /// <summary>
-        /// desCountry control.
+        /// arrivaldate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox desCountry;
+        protected global::System.Web.UI.WebControls.Label arrivaldate;
 
         /// <summary>
-        /// desCity control.
+        /// Duration control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox desCity;
+        protected global::System.Web.UI.WebControls.Label Duration;
 
         /// <summary>
-        /// fName control.
+        /// DestinCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fName;
+        protected global::System.Web.UI.WebControls.Label DestinCountry;
 
         /// <summary>
-        /// lName control.
+        /// DestinCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lName;
+        protected global::System.Web.UI.WebControls.Label DestinCity;
 
         /// <summary>
-        /// phoneNum control.
+        /// Lname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phoneNum;
+        protected global::System.Web.UI.WebControls.Label Lname;
 
         /// <summary>
-        /// email control.
+        /// Fnmae control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.Label Fnmae;
 
         /// <summary>
-        /// numSeats control.
+        /// Class control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox numSeats;
+        protected global::System.Web.UI.WebControls.Label Class;
 
         /// <summary>
-        /// RadioButtonList1 control.
+        /// TicketNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.Label TicketNumber;
 
         /// <summary>
-        /// Label7 control.
+        /// NumofSeat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label NumofSeat;
 
         /// <summary>
-        /// txtPrice control.
+        /// CustomerID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPrice;
+        protected global::System.Web.UI.WebControls.Label CustomerID;
 
         /// <summary>
-        /// confirmBook control.
+        /// TotalPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button confirmBook;
+        protected global::System.Web.UI.WebControls.Label TotalPrice;
     }
 }

@@ -40,6 +40,14 @@ namespace OnlineVacationReservation
                     cmd.Parameters.Add("Number_of_Seat", SqlDbType.Int).Value = Number_of_Seat;
                     cmd.Parameters.Add("Class", SqlDbType.VarChar, 50).Value = Class;
 
+
+
+
+
+                    if (con.State != ConnectionState.Open)
+                    {
+                        con.Open();
+                    }
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         if (dr.Read())
@@ -48,12 +56,6 @@ namespace OnlineVacationReservation
                         }
                     }
 
-
-
-                    if (con.State != ConnectionState.Open)
-                    {
-                        con.Open();
-                    }
                     retRecord = cmd.ExecuteNonQuery();
 
                 }

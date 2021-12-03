@@ -21,5 +21,10 @@ namespace OnlineVacationReservation
         {
             Response.Redirect("FlightSearch");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("searchCruise");
+        }
     }
 }
