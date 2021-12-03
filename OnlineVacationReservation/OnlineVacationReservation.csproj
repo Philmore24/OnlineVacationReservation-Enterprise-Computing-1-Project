@@ -108,6 +108,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="App_Data\JTB_EC_Database.mdf" />
+    <Content Include="App_Data\JTB_EC_Database_log.ldf">
+      <DependentUpon>JTB_EC_Database.mdf</DependentUpon>
+    </Content>
     <Content Include="Booking.aspx" />
     <None Include="Connected Services\ServiceReference1\Cruise.wsdl" />
     <None Include="Connected Services\ServiceReference2\Flights.disco" />
@@ -377,9 +381,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
