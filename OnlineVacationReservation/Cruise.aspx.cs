@@ -33,8 +33,8 @@ namespace OnlineVacationReservation
                 DepartCity.Text = ds.Tables[0].Rows[0]["Departing_City"].ToString();
                 DestiCountry.Text = ds.Tables[0].Rows[0]["Destination_Country"].ToString();
                 DestinCity.Text = ds.Tables[0].Rows[0]["Destination_City"].ToString();
-                CheckIn.Text = ds.Tables[0].Rows[0]["Date_CheckIn "].ToString();
-                CheckIn.Text = ds.Tables[0].Rows[0]["Date_CheckOut "].ToString();
+                CheckIn.Text = ds.Tables[0].Rows[0]["Date_CheckIn"].ToString();
+                CheckOut.Text = ds.Tables[0].Rows[0]["Date_CheckOut"].ToString();
                 Rooms.Text = ds.Tables[0].Rows[0]["Rooms_Available"].ToString();
             }
             con.Close();
@@ -56,6 +56,45 @@ namespace OnlineVacationReservation
                 lblMessage.Text = "There Was An Error While Booking Cruise";
             }
 
+        }
+
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string roomtype;
+            int price = 0;
+
+
+            roomtype = RadioButtonList1.SelectedValue;
+            price = BoardingPriceClass(roomtype);
+            string Cost = "$" + price.ToString();
+            txtPrice.Text = Cost;
+        }
+
+        public int BoardingPriceClass(String SeatClass)
+        {
+            String room = SeatClass;
+            int Cost;
+            Cost = 0;
+            if (room == "Interior")
+            {
+                Cost = 10000;
+            }
+            else
+            if (room == "Ocean View")
+            {
+                Cost = 20000;
+            }
+            else
+            if (room == "Balcony")
+            {
+                Cost = 15000;
+            }
+            else
+                if (room == "Suite")
+            {
+                Cost = 8000;
+            }
+            return Cost;
         }
     }
 }

@@ -44,34 +44,42 @@ namespace OnlineVacationReservation
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            Session["FlightFname"] = txtFname.Text;
+            Session["FlightLname"] = txtLname.Text;
+            Session["FlightEmail"] = txtEmail.Text;
+            Session["FlightPhone#"] = txtnumber.Text;
+            Session["FlightSeat"] = txtTicket.Text;
+            Session["FlightClass"] = RadioButtonList1.SelectedItem.Text;
+
+
             ServiceReference3.BookingServiceSoapClient client = new ServiceReference3.BookingServiceSoapClient();
-            int ret = client.FlightBooking(txtFname.Text, txtLname.Text, txtnumber.Text, txtEmail.Text, Convert.ToInt32(flightid.Text), Convert.ToInt32(txtTicket.Text), RadioButtonList1.SelectedItem.Text );
+            int ret = client.FlightBooking(txtFname.Text, txtLname.Text, txtnumber.Text, txtEmail.Text, Convert.ToInt32(flightid.Text), Convert.ToInt32(txtTicket.Text), RadioButtonList1.SelectedItem.Text);
             if (ret > 0)
             {
-                
+
                 lblMessage.Text = " Flight Was Booked Successful!!";
+                Response.Redirect("ConfirmBooking.aspx?Customer_id=" + ret);
                 //Response.Redirect("ConfirmBooking.aspx");
             }
-            else 
+            else
             {
                 lblMessage.Text = "There Was An Error While Booking Flight";
             }
-            
+
         }
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-                string style;
-                int price = 0;
+
+            string style;
+            int price = 0;
 
 
-                style = RadioButtonList1.SelectedValue;
-                price = TicketPriceClass(style);
-                string Cost = "$" + price.ToString();
-                txtPrice.Text = Cost;
-           
+            style = RadioButtonList1.SelectedValue;
+            price = TicketPriceClass(style);
+            string Cost = "$" + price.ToString();
+            txtPrice.Text = Cost;
+
 
         }
 
